@@ -6,7 +6,7 @@ terminator() {
   exit
 }
 
-echo "$$" > /var/run/holbertonscript.pid
+echo "$$" > /var/run/myscript.pid
 
 while true
 do
