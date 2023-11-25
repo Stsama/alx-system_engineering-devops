@@ -2,7 +2,7 @@
 # Bash script that Displays To infinity and beyond indefinite
 
 terminator() {
-  rm /var/run/holbertonscript.pid
+  rm /var/run/myscript.pid
   exit
 }
 
