@@ -1,4 +1,4 @@
-!#!/usr/bin/env bash
+#!/usr/bin/env bash
 # Bash script that Displays To infinity and beyond indefinite
 
 terminator() {
