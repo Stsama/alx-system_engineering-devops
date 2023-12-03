@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-netstat -ntaup
+netstat -l --program
