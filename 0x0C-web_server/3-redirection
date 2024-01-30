@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Configures an Nginx server so that /redirect_me redirects to another page.
+# The redirection is configured as a "301 Moved Permanently"
+
+sudo apt-get update
+sudo apt-get install -y nginx
+imkdir /etc/nginx/html
+sudo chown -R "$USER":"$USER" /etc/nginx
+sudo chmod -R 755 /etc/nginx
+sudo chmod 755 /etc/nginx/sites-available/default
+touch /etc/nginx/html/index.html
+echo "Holberton School" > /etc/nginx/html/index.html
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+}" > /etc/nginx/sites-available/default
+
+sudo service nginx restart
+
