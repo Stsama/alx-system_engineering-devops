@@ -1,0 +1,4 @@
+#!/bin/bash
+CREATE USER "holberton_user"@localhost IDENTIFIED WITH mysql_native_password BY "projectcorrection280hbtn";
+GRANT REPLICATION SLAVE ON *.* TO "holberton_user"@localhost;
+FLUSH USER;
